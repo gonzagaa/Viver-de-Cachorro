@@ -1,0 +1,428 @@
+#home {
+    background: var(--bg-black);
+    height: 90vh;
+    max-height: 90vh;
+    overflow: hidden;
+  
+    position: relative;
+  
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+  
+    transition: all 200ms ease-in-out;
+  }
+  
+  #home .wrapper {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+  }
+  
+  #home .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  
+  #home .blush {
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(#f8a220bd, transparent 50%);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+    top: -25rem;
+    left: -40rem;
+    opacity: 0.2;
+  }
+  
+  #home .blush.dois {
+    background: radial-gradient(#f8a2207b, transparent 50%);
+    top: initial;
+    left: initial;
+    bottom: -45rem;
+    right: -60rem;
+  }
+  
+  #home .text {
+    margin-top: 95%;
+    text-align: center;
+    position: relative;
+    z-index: 4;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  #home h1 {
+    color: var(--color-text);
+    line-height: .8;
+    font-size: 7rem;
+  
+    margin-top: 1rem;
+  
+    font-family: "Paralucent-Medium", sans-serif;
+  
+    background: linear-gradient(145deg, #ffffff 65%, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  #home h1 span {
+    font-family: "Paralucent-Medium", sans-serif;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  #home p {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.4;
+    margin-top: .5rem;
+  }
+
+  #home h3 {
+    font-family: "Paralucent-Medium", sans-serif;
+    color: #ffffff;
+    font-size: 2rem;    
+
+    margin-bottom: 1rem;
+  }
+
+  #home h3 span {
+    font-family: "Paralucent-Medium", sans-serif;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    display: block;
+  }
+  
+  #home p span {
+    font-weight: 700;
+    
+  }
+
+  #home a {
+    width: 100%;
+  }
+  
+  #home a button {
+    margin-top: 3rem;
+    width: 100%;
+  }
+  
+  #home .image img {
+    width: 100%;
+  }
+  
+  #home .image img.mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  
+  #home .image img.bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    filter: brightness(.5);
+  }
+  
+  #home .image img.icon {
+    width: 70%;
+    opacity: 0.2;
+    position: absolute;
+    z-index: 1;
+    top: 2%;
+    right: -20%;
+  }
+  
+  #home .image img.pilares {
+    width: 40%;
+    position: absolute;
+    right: -5%;
+    top: -5%;
+    z-index: 1;
+  
+    transform: rotate(10deg);
+  }
+  
+  #home::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #000000, #00000000 20%);
+    z-index: 2;
+  }
+  
+  #home .image img.desktop {
+    display: none;
+  }
+
+  #home h2 {
+    display: inherit;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    background: linear-gradient(145deg, #f2faff 65%, #ffe1a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @media (min-width: 1080px) {
+    header#home {
+      justify-content: center;
+      position: relative;
+      height: 100vh;
+      max-height: 100vh;
+  
+      mask-image: none;
+    }
+
+    header#home h3 {
+      font-size: 2.3rem;
+    }
+
+    header#home h3 span {
+      display: initial;
+    }
+  
+    header#home .blush {
+      display: none;
+      background: radial-gradient(#f8a120, transparent 50%);
+      opacity: 0.3;
+      width: 700px;
+      height: 700px;
+      top: 50%;
+      left: 40%;
+      z-index: 2;
+  
+      bottom: initial;
+      right: initial;
+    }
+  
+    header#home .blush.dois {
+      display: none;
+      background: radial-gradient(#f8a120, transparent 50%);
+      opacity: 0.4;
+      width: 1000px;
+      height: 1000px;
+      top: -10%;
+      left: 38%;
+      z-index: 2;
+  
+      bottom: initial;
+      right: initial;
+    }
+  
+    header#home img.minigrafico {
+      position: absolute;
+      width: 50%;
+      bottom: -13%;
+      z-index: 2;
+      filter: blur(3px);
+    }
+  
+    header#home img.minigrafico.esquerda {
+      left: -10%;
+    }
+  
+    header#home img.minigrafico.direita {
+      right: -10%;
+      z-index: 3;
+      bottom: -8%;
+      transform: rotate(180deg);
+    }
+  
+    header#home::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, #020100c9, #00000000 50%);
+      z-index: 2;
+      display: none;
+    }
+  
+
+  
+    header#home .image img.mobile {
+      display: none;
+    }
+  
+    /* header#home .image img.desktop {
+      z-index: 2;
+      display: inherit;
+      width: 35%;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      mask-image: linear-gradient(to bottom, #000 90%, transparent);
+      right: 2%;
+    } */
+  
+    header#home .image img.desktop {
+      display: inherit;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left:0;
+  
+      mask-image: none;
+    }
+  
+    header#home .image img.bg {
+      filter: brightness(1.2);
+      transform: initial;
+      aspect-ratio: 16/9;
+      display: inherit;
+      width: 110%;
+      position: absolute;
+      bottom: 5%;
+      left: 0;
+  
+      animation: img infinite linear 150s;
+    }
+  
+    @keyframes img {
+      0% {
+        transform: translateX(0) scale(1);
+      }
+  
+      50% {
+        transform: translateX(-30%) scale(1.5);
+      }
+  
+      100% {
+        transform: translateX(0) scale(1);
+      }
+    }
+  
+    header#home .image img.icon {
+      width: 25%;
+      right: 18%;
+      top: 6%;
+      left: initial;
+      z-index: 1;
+      transform: initial;
+  
+      mask-image: linear-gradient(to bottom, #000 40%, transparent);
+    }
+  
+    header#home .image img.pilares {
+      width: 25%;
+      right: 0;
+      top: -5%;
+      z-index: 1;
+  
+      transform: rotate(10deg);
+  
+      mask-image: linear-gradient(to bottom, #000 40%, transparent);
+    }
+  
+    header#home .content {
+      text-align: center;
+      align-items: center;
+  
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    header#home .text {
+      margin-top: initial;
+      margin-bottom: initial;
+      width: 100%;
+    }
+  
+    header#home .circle {
+      top: 820px;
+      width: 100%;
+    }
+  
+    header#home .content .text {
+      text-align: left;
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+  
+      position: relative;
+      z-index: 2;
+    }
+  
+    header#home .content h1 {
+      font-size: 12rem;
+      line-height: 0.8;
+      background: linear-gradient(180deg, #fffcf6 60%, #ffe1a0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0rem;
+    }
+
+    header#home .content a {
+      width: initial;
+    }
+  
+    header#home .content p {
+      font-size: 2.7rem;
+      margin-top: 2rem;
+      font-weight: 200;
+      color: #ffffffdc;
+    }
+  
+    header#home .content p span {
+      color: #fff;
+      font-weight: 600;
+    }
+  
+    header#home h2 {
+      display: inherit;
+      font-size: 1.4rem;
+      letter-spacing: 9px;
+      background: linear-gradient(145deg, #f2faff 65%, #ffe1a0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  
+    header#home .content h2::before,
+    header#home .content h2::after {
+      width: 40%;
+    }
+  
+    header#home .content h2::before {
+      left: -45%;
+      display: none;
+    }
+  
+    header#home .content h2::after {
+      right: -45%;
+    }
+  
+    header#home .content a button {
+      font-size: 1.8rem;
+      margin-top: 3rem;
+    }
+  }
+  
+  @media (min-width: 1700px) {
+  
+    /* header#home .image img.desktop {
+      width: 35%;
+      bottom: -15%;
+      right: 13%;
+    } */
+  }
+  

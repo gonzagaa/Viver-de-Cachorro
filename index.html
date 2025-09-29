@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viver de Cachorro - WorkShop Gratuito</title>
+    <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon">
+
+    <link href="https://fonts.cdnfonts.com/css/paralucent-heavy?styles=168363,168366,168368,168370,168372,168374" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/index.css?v=6">
+
+    <link rel="preload" href="https://player-vz-fa2c182e-ab9.tv.pandavideo.com.br/embed/css/styles.css" as="style">
+<link rel="prerender" href="https://player-vz-fa2c182e-ab9.tv.pandavideo.com.br/embed/?v=d085627b-eb70-4cf7-a1ce-6210b7ca1096">
+<link rel="preload" href="https://player-vz-fa2c182e-ab9.tv.pandavideo.com.br/embed/js/hls.js" as="script">
+<link rel="preload" href="https://player-vz-fa2c182e-ab9.tv.pandavideo.com.br/embed/js/plyr.polyfilled.min.js" as="script">
+<link rel="preload" href="https://config.tv.pandavideo.com.br/vz-fa2c182e-ab9/d085627b-eb70-4cf7-a1ce-6210b7ca1096.json" as="fetch">
+<link rel="preload" href="https://config.tv.pandavideo.com.br/vz-fa2c182e-ab9/config.json" as="fetch">
+<link rel="preload" href="https://b-vz-fa2c182e-ab9.tv.pandavideo.com.br/d085627b-eb70-4cf7-a1ce-6210b7ca1096/playlist.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://b-vz-fa2c182e-ab9.tv.pandavideo.com.br">
+<link rel="dns-prefetch" href="https://player-vz-fa2c182e-ab9.tv.pandavideo.com.br">
+<link rel="dns-prefetch" href="https://vz-fa2c182e-ab9.b-cdn.net">
+
+</head>
+<body id="body" class="smooth-scroll-wrapper">
+
+    <header class="header" id="home">
+      <div class="blush um"></div>
+      <div class="blush dois"></div>
+              
+      <div class="wrapper">
+        <div class="content">
+            <div class="text">
+                  <!-- <h2 data-aos="fade-up">EVENTO ONLINE</h2> -->
+
+                  <h3 data-aos="fade-up">Dia 19 às 19h <span>WorkShop Gratuito</span></h3>
+
+                  <h1  data-aos="fade-up">Viver de  <br><span>Cachorro</span></span></h1>
+
+                  <p data-aos="fade-up">Use a Internet para Alavancar seu Trabalho</p>
+
+                  <a data-aos="fade-up"><button id="openModal" class="button openModal">INSCREVA-SE AGORA</button></a>
+            </div>
+          </div>
+      </div>      
+      <div class="image">
+        <img class="desktop" src="./assets/bg (11).avif" alt="">
+        <img class="mobile" src="./assets/Frame 9 (6).avif" alt="">
+      </div>
+    </header>
+
+    <!-- <section id="video">
+      <img class="arrow" src="./assets/line comunidade.svg" alt="">
+      <div class="wrapper">
+        <div class="content">
+          <div class="video">
+            <iframe id="panda-2f8fb203-17cb-40b8-9da6-f464e7f8a1e0" src="https://player-vz-fa2c182e-ab9.tv.pandavideo.com.br/embed/?v=2f8fb203-17cb-40b8-9da6-f464e7f8a1e0" style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true fetchpriority="high"></iframe>
+            <a><button class="button mobile openModal">GARANTA SUA VAGA</button></a>
+          </div>
+
+          <a href="#"><button class="button desktop">GARANTA SUA VAGA</button></a>
+        </div>
+      </div>
+    </section> -->
+
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal">
+          <!-- <div class="video">
+            
+          </div> -->
+
+          <div class="content">
+            <button id="closeModal" class="close-button">X</button>
+            <h2>WORKSHOP GRATUITO</h2>
+            <p><SPAN>Preencha os campos</SPAN> e inscreva-se no workshop gratuitamente</p>
+
+            <form id="leadForm">
+              <div>
+                <input type="text" name="nome" placeholder="Seu Nome" required />
+              </div>
+              <div>
+                <input type="email" name="email" placeholder="Digite seu E-mail" required />
+              </div>
+              <div>
+                <input type="text" id="whatsapp" name="whatsapp" placeholder="WhatsApp com DDD" required />
+              </div>
+              <button class="button" type="submit">GARANTA SUA VAGA</button>
+            </form>
+          </div>
+        </div>
+    </div>
+    
+    <script>
+      // Evento para o botão "ENTRAR NA LISTA DE ESPERA"
+      document.getElementById('openModal').addEventListener('click', function() {
+        fbq('track', 'Lead', {
+          content_name: 'Botão Entrar na Lista de Espera'
+        });
+      });
+    
+      // Evento para o botão "ENVIAR"
+      document.querySelector('.button[type="submit"]').addEventListener('click', function() {
+        fbq('track', 'SubmitApplication', {
+          content_name: 'Botão Enviar Formulário'
+        });
+      });
+    </script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js?v=6"></script>
+</body>
+</html> 
