@@ -73,7 +73,7 @@ document.getElementById('leadForm').addEventListener('submit', function (e) {
   })
   .then(response => {
     if (response.ok) {
-      alert('Cadastro enviado com sucesso!');
+      // alert('Cadastro enviado com sucesso!');
       e.target.reset(); // Limpa o formulário
 
       // Redireciona o usuário para o YouTube Live

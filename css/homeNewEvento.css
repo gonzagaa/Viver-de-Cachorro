@@ -112,11 +112,14 @@
 
   #home a {
     width: 100%;
+
+    padding-inline: 7%;
   }
   
   #home a button {
     margin-top: 3rem;
     width: 100%;
+
   }
   
   #home .image img {
@@ -410,11 +413,17 @@
     header#home .content h2::after {
       right: -45%;
     }
+
+    header#home .content a {
+      padding: 0;
+    }
   
     header#home .content a button {
       font-size: 1.8rem;
       margin-top: 3rem;
     }
+
+
   }
   
   @media (min-width: 1700px) {
