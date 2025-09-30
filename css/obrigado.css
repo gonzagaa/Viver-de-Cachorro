@@ -1,5 +1,6 @@
 #obrigado {
-    height: 100vh;
+    height: 100dvh;
+    max-height: 200dvh;
     position: relative;
     overflow: hidden;
 }
@@ -33,7 +34,7 @@
     justify-content: center;
     align-items: center;
 
-    margin-top: 18%;
+    margin-top: 28%;
 }
 
 #obrigado img.logo {
@@ -47,7 +48,7 @@
     line-height: 1;
 
     margin-bottom: 3rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
 
     font-family: "Paralucent-Medium", sans-serif;
 }
@@ -60,10 +61,15 @@
 }
 
 #obrigado header p {
-    color: #ffffff;
+    color: #d4d4d4;
     font-size: 1.6rem;
 
     margin-top: 3rem;
+}
+
+#obrigado header p span {
+    font-weight: 700;
+    color: #fff;
 }
 
 #obrigado header a {
