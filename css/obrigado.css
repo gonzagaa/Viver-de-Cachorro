@@ -34,7 +34,7 @@
     justify-content: center;
     align-items: center;
 
-    margin-top: 28%;
+    margin-top: 36%;
 }
 
 #obrigado img.logo {
@@ -64,7 +64,6 @@
     color: #d4d4d4;
     font-size: 1.6rem;
 
-    margin-top: 3rem;
 }
 
 #obrigado header p span {
@@ -76,6 +75,25 @@
     width: 100%;
 }
 
+#obrigado h3 {
+    font-family: "Paralucent-Medium", sans-serif;
+    color: #ffffff;
+    font-size: 3rem;    
+
+    margin-top: 3rem;
+
+    margin-bottom: 1rem;
+  }
+
+  #obrigado h3 span {
+    font-family: "Paralucent-Medium", sans-serif;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    display: block;
+  }
+
 @media (min-width: 1080px) {
     section#obrigado header {
         display: flex;
@@ -83,19 +101,34 @@
         align-items: center;
         justify-content: center;
 
-        margin-top: 3%;
+        margin-top: 13%;
+
+        overflow: initial;
+
+    }
+
+    section#obrigado h3 {
+      font-size: 4.5rem;
+      font-weight: 600;
+
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     section#obrigado header h2 {
-        font-size: 3rem;
+        font-size: 4rem;
 
         margin-bottom: 4rem;
     }
+
+    section#obrigado header h2 span {
+        display: block;
+    }
     
     section#obrigado header p {
-        font-size: 1.6rem;
+        font-size: 2.4rem;
 
-        margin-top: 4rem;
+        padding-inline: 32%;
     }
     
     section#obrigado header a {

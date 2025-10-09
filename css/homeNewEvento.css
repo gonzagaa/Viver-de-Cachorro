@@ -197,11 +197,11 @@
     }
 
     header#home h3 {
-      font-size: 2.3rem;
+      font-size: 2.7rem;
+      font-weight: 600;
     }
 
     header#home h3 span {
-      display: initial;
     }
   
     header#home .blush {
@@ -382,13 +382,11 @@
     header#home .content p {
       font-size: 2.7rem;
       margin-top: 2rem;
-      font-weight: 200;
-      color: #ffffffdc;
+      font-weight: 600;
     }
   
     header#home .content p span {
-      color: #fff;
-      font-weight: 600;
+      font-weight: 700;
     }
   
     header#home h2 {
