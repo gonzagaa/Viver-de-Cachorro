@@ -167,7 +167,7 @@
 .modal .ll-form input[type="text"],
 .modal .ll-form input[type="email"],
 .modal .ll-form input[type="tel"] {
-  color: #fff;
+  color: #fff !important;
   width: 100%;
   font-size: 1.6rem !important;
   padding: 1rem 1.5rem !important;
