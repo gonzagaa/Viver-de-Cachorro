@@ -1,8 +1,7 @@
 #home {
     background: var(--bg-black);
-    height: 90vh;
-    max-height: 90vh;
     overflow: hidden;
+    padding-block: 8rem;
   
     position: relative;
   
@@ -47,7 +46,7 @@
   }
   
   #home .text {
-    margin-top: 95%;
+    margin-top: 65%;
     text-align: center;
     position: relative;
     z-index: 4;
