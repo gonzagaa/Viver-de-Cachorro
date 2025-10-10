@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/index.css?v=10">
+    <link rel="stylesheet" href="./css/index.css?v=1">
 
     <link rel="preload" href="https://player-vz-fa2c182e-ab9.tv.pandavideo.com.br/embed/css/styles.css" as="style">
 <link rel="prerender" href="https://player-vz-fa2c182e-ab9.tv.pandavideo.com.br/embed/?v=d085627b-eb70-4cf7-a1ce-6210b7ca1096">
@@ -58,14 +58,14 @@ src="https://www.facebook.com/tr?id=2268793083573977&ev=PageView&noscript=1"
     <meta property="og:url" content="https://comunidadeadestramento.com.br/viverdecachorro//" />
     <meta property="og:title" content="Viver de Cachorro - Workshop Gratuito - Dia 19 às 19h" />
     <meta property="og:description" content="Use a Internet para Alavancar seu Trabalho" />
-    <meta property="og:image" content="comunidadeadestramento.com.br/viverdecachorro/assets/banner.avif" />
+    <meta property="og:image" content="https://comunidadeadestramento.com.br/viverdecachorro/assets/preview.webp" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://comunidadeadestramento.com.br/viverdecachorro//" />
     <meta property="twitter:title" content="Viver de Cachorro - Workshop Gratuito - Dia 19 às 19h" />
     <meta property="twitter:description" content="Use a Internet para Alavancar seu Trabalho" />
-    <meta property="twitter:image" content="comunidadeadestramento.com.br/viverdecachorro/assets/banner.avif" />
+    <meta property="twitter:image" content="https://comunidadeadestramento.com.br/viverdecachorro/assets/preview.webp" />
 
     <!-- Autor e Indexação -->
     <meta name="author" content="Gustavo Gonzaga" />
@@ -195,16 +195,54 @@ src="https://www.facebook.com/tr?id=2268793083573977&ev=PageView&noscript=1"
       });
     </script>
 
+
+
 <script src="https://paginas.rocks/scripts/capture/form/async-form-capture.js" async defer></script>
 
-    <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const botao = document.querySelector(".button.enviarForm");
-    if (botao) {
-      botao.addEventListener("click", function() {
-        fbq('track', 'CompleteRegistration'); 
+<script>
+  // Função para capturar fbp e fbc (desduplicação)
+  function getCookie(name) {
+    const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+    return match ? match[2] : null;
+  }
+
+  async function sendFacebookEvent(eventName) {
+    const fbp = getCookie("_fbp");
+    const fbc = getCookie("_fbc");
+    const eventSourceUrl = window.location.href;
+
+    const payload = {
+      event_name: eventName,
+      event_source_url: eventSourceUrl,
+      fbp,
+      fbc,
+      email: "teste@example.com", // fictício, apenas para qualidade do evento
+      phone: "5599999999999" // fictício
+    };
+
+    try {
+      const res = await fetch("http://viverdecachorro-backend.vercel.app/api/send-event", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
+
+      if (res.ok) {
+        console.log(`✅ Evento "${eventName}" enviado com sucesso!`);
+      } else {
+        console.warn(`⚠️ Falha ao enviar evento "${eventName}"`);
+      }
+    } catch (error) {
+      console.error("Erro ao enviar evento:", error);
     }
+  }
+
+  // Dispara PageView ao carregar
+  window.addEventListener("load", () => sendFacebookEvent("PageView"));
+
+  // Dispara Lead ao clicar no botão
+  document.querySelector(".btn.btn-danger[type='submit']").addEventListener("click", () => {
+    sendFacebookEvent("Lead");
   });
 </script>
 
@@ -213,6 +251,6 @@ src="https://www.facebook.com/tr?id=2268793083573977&ev=PageView&noscript=1"
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="./script.js?v=10"></script>
+    <script src="./script.js?v=11"></script>
 </body>
 </html> 
