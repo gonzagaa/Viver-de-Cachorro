@@ -183,7 +183,6 @@ src="https://www.facebook.com/tr?id=2268793083573977&ev=PageView&noscript=1"
 <script src="https://paginas.rocks/scripts/capture/form/async-form-capture.js" async defer></script>
 
 <script>
-  // Função para capturar fbp e fbc (desduplicação)
   function getCookie(name) {
     const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
     return match ? match[2] : null;
@@ -199,8 +198,8 @@ src="https://www.facebook.com/tr?id=2268793083573977&ev=PageView&noscript=1"
       event_source_url: eventSourceUrl,
       fbp,
       fbc,
-      email: "teste@example.com", // fictício, apenas para qualidade do evento
-      phone: "5599999999999" // fictício
+      email: "teste@example.com",
+      phone: "5599999999999"
     };
 
     try {
@@ -220,14 +219,22 @@ src="https://www.facebook.com/tr?id=2268793083573977&ev=PageView&noscript=1"
     }
   }
 
-  // Dispara PageView ao carregar
-  window.addEventListener("load", () => sendFacebookEvent("PageView"));
+  // Executa apenas quando a página estiver pronta
+  window.addEventListener("DOMContentLoaded", () => {
+    // Dispara PageView
+    sendFacebookEvent("PageView");
 
-  // Dispara Lead ao clicar no botão
-  document.querySelector(".btn.btn-danger[type='submit']").addEventListener("click", () => {
-    sendFacebookEvent("Lead");
+    // Dispara Lead ao clicar no botão
+    const leadButton = document.querySelector(".btn.btn-danger[type='submit']");
+    if (leadButton) {
+      leadButton.addEventListener("click", () => sendFacebookEvent("Lead"));
+      console.log("✅ Listener de Lead adicionado!");
+    } else {
+      console.warn("⚠️ Botão de Lead não encontrado no DOM.");
+    }
   });
 </script>
+
 
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
